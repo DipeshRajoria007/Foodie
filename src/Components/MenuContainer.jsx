@@ -6,7 +6,7 @@ import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
 
 const MenuContainer = () => {
-  const [filter, setFilter] = useState("beef");
+  const [filter, setFilter] = useState("chicken");
   const[{foodItems},dispatch] = useStateValue();
   useEffect(() => {}, [filter])
   
@@ -17,7 +17,7 @@ const MenuContainer = () => {
         <p className="text-2xl font-semibold capitalize text-headingColor relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-tr from-orange-400 to-orange-600 transition-all ease-in-out duration-100 mr-auto">
           Our Hot Dishes
         </p>
-        <div className="w-full flex gap-8 mt-6 py-6 overflow-x-scroll scrollbar-none items-center justify-start lg:justify-center ">
+        <div className="w-full flex gap-8 mt-6 py-6 overflow-x-scroll scrollbar-none items-center  justify-start lg:justify-center ">
           {categories &&
             categories.map((category) => (
               <motion.div
